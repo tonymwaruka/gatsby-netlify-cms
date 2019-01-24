@@ -6,3 +6,5 @@ tags:
   - post
 ---
 Test content goes here.
+
+![](/img/coffee-gear.png)
