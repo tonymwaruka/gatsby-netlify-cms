@@ -5,6 +5,6 @@ date: 2019-01-31T20:56:55.165Z
 description: This is a test post to test slug
 tags:
   - testslug
-slugname: test-slug-page
+slug: test-slug
 ---
 This is a test.
