@@ -41,8 +41,8 @@ exports.createPages = ({ actions, graphql }) => {
         ),
         // additional data can be passed via context
         context: {
-          slug: edge.node.fields.slug,
-          id
+          id,
+          slug: edge.node.fields.slug
         },
       })
     })
