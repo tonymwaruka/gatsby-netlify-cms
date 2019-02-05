@@ -31,12 +31,20 @@ awards:
   dashimage: /img/dashboard.jpg
 feedback:
   blurb:
-    ptext: >-
+    ptext1: >-
       Reach customers where they’re most engaged, and get responses within
       minutes, not months.
-    smalltitle: 'MORE RESPONSES, FASTER.'
-    title: The power of Feedback.
+    ptext2: >-
+      Seamlessly manage review and NPS invites, responses, and follow-ups to get
+      the full conversation.
+    ptext3: >-
+      Slice and dice feedback across locations, departments, employees, and
+      time.
+    smalltitle1: 'MORE RESPONSES, FASTER.'
+    smalltitle2: EVERY MESSAGE IN ONE PLACE.
+    smalltitle3: COMPLETE CUSTOMER INSIGHTS.
   fimage: /img/dashboard_phone.png
+  title: The power of Feedback.
 morecustomers:
   fimage: /img/man_desk.jpg
   ptext: >-
