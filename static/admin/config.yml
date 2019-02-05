@@ -20,12 +20,13 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Slug", name: "slug", widget: "text"}
 
-  - name: "partner_pages"
+  - name: "partner"
     label: "Partner"
-    folder: "src/pages/partner_pages"
+    folder: "src/pages/partner-pages"
     create: true
     fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-pages"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-page"}
+          - {label: "Slug", name: "slug", widget: "string", required: false}
           - {label: Small Title, name: smalltitle, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: Image, name: image, widget: image}
@@ -35,15 +36,68 @@ collections:
                {label: Blurbs, name: blurbs, widget: object, fields: [
                    {label: Title, name: title, widget: text},
                    {label: Description, name: description, widget: text},
-                   {label: Points, name: points, widget: list}]
+                   {label: List, name: points, widget: list}]
                 }]
             }
           - {label: Awards Section, name: awards, widget: object, fields: [
               {label: Blurb, name: blurb, widget: object, fields: [
                    {label: Title, name: title, widget: string},
-                   {label: Text, name: ptext, widget: text}]
+                   {label: Company Name, name: ptext, widget: string},
+                   {label: Logos, name: image, widget: list, field: {label: Image, name: image, widget: image}}]
               },
-            {label: Points, name: points, widget: list, field: {label: Image, name: image, widget: image}},
+            {label: Image, name: dashimage, widget: image}
+          ]}
+          - {label: Feedback Section, name: feedback, widget: object, fields: [
+              {label: Feedback Image, name: fimage, widget: image},
+              {label: Title, name: title, widget: string},
+              {label: Blurb, name: blurb, widget: object, fields: [
+                   {label: Small Title, name: smalltitle1, widget: string},
+                   {label: Text, name: ptext1, widget: text},
+                   {label: Small Title, name: smalltitle2, widget: string},
+                   {label: Text, name: ptext2, widget: text},
+                   {label: Small Title, name: smalltitle3, widget: string},
+                   {label: Text, name: ptext3, widget: text}
+              ]}
+          ]}
+          - {label: Turn More Customers, name: morecustomers, widget: object, fields: [
+             {label: Title, name: title, widget: string},
+             {label: Text, name: ptext, widget: text},
+             {label: Feedback Image, name: fimage, widget: image}
+            ]}
+          - {label: Businesses Section, name: businesses, widget: object, fields: [
+             {label: Title, name: title, widget: string},
+             {label: Logos, name: logos, widget: list, field: {label: Image, name: image, widget: image}}
+            ]}
+          - {label: Prevent Search Engines from indexing this page, name: turnoffseo, widget: boolean, default: true}
+          - {label: "Title Tag", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
+
+
+  - name: "landing"
+    label: "Landing"
+    folder: "src/pages/landing-pages"
+    create: true
+    fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-page"}
+          - {label: "Slug", name: "slug", widget: "string", required: false}
+          - {label: Small Title, name: smalltitle, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Dark Overlay, name: darkoverlay, widget: boolean, default: true}
+          - {label: Form Section, name: form, widget: object, fields: [
+               {label: Form ID, name: formid, widget: string},
+               {label: Blurbs, name: blurbs, widget: object, fields: [
+                   {label: Title, name: title, widget: text},
+                   {label: Description, name: description, widget: text},
+                   {label: List, name: points, widget: list}]
+                }]
+            }
+          - {label: Awards Section, name: awards, widget: object, fields: [
+              {label: Blurb, name: blurb, widget: object, fields: [
+                   {label: Title, name: title, widget: string},
+                   {label: Company Name, name: ptext, widget: string},
+                   {label: Logos, name: image, widget: list, field: {label: Image, name: image, widget: image}}]
+              },
             {label: Image, name: dashimage, widget: image}
           ]}
           - {label: Feedback Section, name: feedback, widget: object, fields: [
@@ -64,10 +118,12 @@ collections:
              {label: Feedback Image, name: fimage, widget: image}
             ]}
           - {label: Businesses Section, name: businesses, widget: object, fields: [
-             {label: Title, name: title, widget: text},
+             {label: Title, name: title, widget: string},
              {label: Logos, name: logos, widget: list, field: {label: Image, name: image, widget: image}}
             ]}
-          - {label: Prevent Search Engines from indexing this page, name: turnoffseo, widget: boolean}
+          - {label: Prevent Search Engines from indexing this page, name: turnoffseo, widget: boolean, default: true}
+          - {label: "Title Tag", name: "title", widget: "string"}
+          - {label: "Meta Description", name: "description", widget: "text"}
 
   - name: "pages"
     label: "Pages"
