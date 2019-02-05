@@ -20,6 +20,56 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Slug", name: "slug", widget: "text"}
 
+  - name: "partner_pages"
+    label: "Partner Pages"
+    folder: "src/pages/partner_pages"
+    create: true
+    fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "partner-pages"}
+          - {label: Small Title, name: smalltitle, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Dark Overlay, name: darkoverlay, widget: boolean, default: true}
+          - {label: Form Section, name: form, widget: object, fields: [
+              {label: Form ID, name: formid, widget: string},
+              {label: Blurbs, name: blurbs, widget: object, fields:
+                  - {label: Title, name: title, widget: text},
+                  - {label: Description, name: description, widget: text},
+                  - {label: Points, name: points, widget: list}
+              }]
+            }
+          - {label: Awards Section, name: awards, widget: object, fields: [
+              {label: Blurb, name: blurb, widget: object, fields:
+                  - {label: Title, name: title, widget: string},
+                  - {label: Text, name: ptext, widget: text}
+              }
+          - {label: Points, name: points, widget: list, field: {label: Image, name: image, widget: image}}
+              ]
+          - {label: Image, name: dashimage, widget: image}
+            }
+          - {label: Feedback Section, name: feedback, widget: object, fields: [
+            - {label: Feedback Image, name: fimage, widget: image},
+              {label: Blurb, name: blurb, widget: object, fields:
+                  - {label: Title, name: title, widget: string},
+                  - {label: Small Title, name: smalltitle, widget: string},
+                  - {label: Text, name: ptext, widget: text}
+                  - {label: Small Title, name: smalltitle, widget: string},
+                  - {label: Text, name: ptext, widget: text}
+                  - {label: Small Title, name: smalltitle, widget: string},
+                  - {label: Text, name: ptext, widget: text}
+              }]
+            }
+          - {label: Turn More Customers, widget: object, fields: [
+            - {label: Title, name: title, widget: string},
+            - {label: Text, name: ptext, widget: text},
+            - {label: Feedback Image, name: fimage, widget: image}]
+            }
+          - {label: Businesses Section, widget: object, fields: [
+            - {label: Title, name: title, widget: text},
+            - {label: Logos, name: logos, widget: list, field: {label: Image, name: image, widget: image}}
+            }
+          - {label: Prevent Search Engines from indexing this page, name: turnoffseo, widget: boolean}
+
   - name: "pages"
     label: "Pages"
     files:
