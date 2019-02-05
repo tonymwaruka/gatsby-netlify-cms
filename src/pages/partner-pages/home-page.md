@@ -1,6 +1,6 @@
 ---
 templateKey: partner-page
-slug: /
+slug: ''
 smalltitle: PODIUM FEEDBACK
 heading: 'Get better, faster customer insights with Podium Feedback.'
 image: /img/feedback_hero_image.jpg
